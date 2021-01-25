@@ -33,7 +33,7 @@ open class JRefreshAutoFooter: JRefreshFooter {
                 executeRefreshingCallback()
             } else if newState == .NoMoreData || state == .Idle {
                 if oldState == .Refreshing {
-                    endRefreshingCompletionBlock?()
+                    self.endRefreshingCompletionBlock??()
                 }
             }
         }

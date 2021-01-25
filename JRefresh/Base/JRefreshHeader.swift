@@ -58,7 +58,7 @@ open class JRefreshHeader: JRefreshComponent {
                     }
                 }) { (finished) in
                     self.pullingPercent = 0.0
-                    self.endRefreshingCompletionBlock?()
+                    self.endRefreshingCompletionBlock??()
                 }
             } else if newState == .Refreshing {
                 DispatchQueue.main.async { [weak self] in
